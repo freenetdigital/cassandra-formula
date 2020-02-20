@@ -12,7 +12,7 @@ cassandra:
 
   pkgrepo.managed:
     - humanname: Cassandra
-    - name: deb http://www.apache.org/dist/cassandra/debian {{ cassandra.series }} main
+    - name: deb https://downloads.apache.org/cassandra/debian {{ cassandra.series }} main
     - file: /etc/apt/sources.list.d/cassandra.list
     - keyid: {{ cassandra.keyid }}
     - keyserver: {{ cassandra.keyserver }}
