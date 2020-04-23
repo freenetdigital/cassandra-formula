@@ -8,8 +8,10 @@ cassandra:
     rack: rack1
     cluster_name: Test Cluster
     authenticator: AllowAllAuthenticator
+    num_tokens: 256
     listen_address: localhost
     rpc_address: localhost
     seeds:
       - 127.0.0.1
     endpoint_snitch: SimpleSnitch
+    enable_materialized_views: false
