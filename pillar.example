@@ -6,10 +6,11 @@ cassandra:
     rack: y
     cluster_name: Test Cluster
     authenticator: PasswordAuthenticator
+    num_tokens: 256
     listen_address: 1.2.3.4
     rpc_address: 1.2.3.4
     seeds:
       - 127.0.0.1
       - 1.2.3.5
     endpoint_snitch: SimpleSnitch
-
+    enable_materialized_views: true
