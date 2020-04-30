@@ -13,4 +13,3 @@ cassandra:
       - 127.0.0.1
       - 1.2.3.5
     endpoint_snitch: SimpleSnitch
-    enable_materialized_views: true
