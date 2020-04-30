@@ -21,5 +21,6 @@ cassandra:
     read_request_timeout_in_ms: 5000
     range_request_timeout_in_ms: 10000
     write_request_timeout_in_ms: 5000
+    counter_write_request_timeout_in_ms: 5000
     auto_snapshot: true
 
