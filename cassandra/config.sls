@@ -23,3 +23,7 @@ cassandra_config_rackdc:
     - watch_in:
       - service: cassandra
 
+cassandra_disable_transparent_huge_pages:
+  cmd.run:
+    - name: echo "never" > /sys/kernel/mm/transparent_hugepage/defrag
+
