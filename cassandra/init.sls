@@ -4,11 +4,11 @@ cassandra:
   pkg.installed:
     - name: {{ cassandra.pkg }}
 
-  service.running:
-    - name: cassandra
-    - enable: True
-    - require:
-      - pkg: cassandra
+#  service.running:
+#    - name: cassandra
+#    - enable: True
+#    - require:
+#      - pkg: cassandra
 
   pkgrepo.managed:
     - humanname: Cassandra
