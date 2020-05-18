@@ -41,11 +41,10 @@ cassandra_systemd_service:
     - user: root
     - group: root
     - makedirs: True
-
-cassandra-systemd:
-  service.runnning:
-    - enable: True
-    - reload: True
+  service.running:
+    - name: cassandra-systemd
+      enable: True
+      reload: True
 
 cassandra_disable_transparent_huge_pages:
   cmd.run:
