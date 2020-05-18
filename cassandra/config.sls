@@ -35,14 +35,14 @@ cassandra_service:
 
 cassandra_systemd_service:
   file.managed:
-    - name: /etc/systemd/system/cassandra_systemd.service
+    - name: /etc/systemd/system/cassandra-systemd.service
     - source: salt://cassandra/files/cassandra-systemd.service
     - mode: 644
     - user: root
     - group: root
     - makedirs: True
   service.runnning:
-    - name: cassandra_systemd
+    - name: cassandra-systemd
       enable: True
 
 cassandra_disable_transparent_huge_pages:
