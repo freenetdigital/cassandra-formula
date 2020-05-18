@@ -4,10 +4,6 @@ cassandra:
   pkg.installed:
     - name: {{ cassandra.pkg }}
 
-  pkg.installed:
-    - name: libjemalloc1
-
-
 #  service.running:
 #    - name: cassandra
 #    - enable: True
@@ -23,4 +19,6 @@ cassandra:
     - require_in:
       - pkg: cassandra
 
-
+jemalloc:
+  pkg.installed:
+    - name: libjemalloc1
