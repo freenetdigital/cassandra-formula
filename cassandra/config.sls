@@ -35,7 +35,7 @@ cassandra_service:
 
 cassandra_systemd_service:
   file.managed:
-    - name: /etc/systemd/system/cassandra_systemd
+    - name: /etc/systemd/system/cassandra_systemd.service
     - source: salt://cassandra/files/cassandra-systemd.service
     - mode: 644
     - user: root
