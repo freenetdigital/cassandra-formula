@@ -35,8 +35,8 @@ cassandra_service:
 
 cassandra_systemd_service:
   file.managed:
-    - name: /etc/systemd/system/disable-transparent-hugepage.conf
-    - source: salt://cassandra/files/disable-transparent-hugepage.conf
+    - name: /etc/systemd/system/cassandra_systemd
+    - source: salt://cassandra/files/cassandra-systemd.service
     - mode: 644
     - user: root
     - group: root
@@ -56,7 +56,4 @@ cassandra_disable_transparent_huge_pages:
     - user: root
     - group: root
     - makedirs: True
-  service.runnning:
-    - name: disable-transparent-hugepage
-    - enable: True
 
