@@ -12,7 +12,6 @@ Environment=CASSANDRA_HOME=/usr/share/cassandra
 Environment=CASSANDRA_OWNR=cassandra
 ExecStart=/usr/sbin/cassandra -p /var/run/cassandra/cassandra.pid
 PIDFile=/var/run/cassandra/cassandra.pid
-WorkingDirectory=/var/lib/cassandra
 LimitMEMLOCK=infinity
 LimitNOFILE=100000
 LimitNPROC=32768
