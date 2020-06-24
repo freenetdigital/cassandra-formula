@@ -7,8 +7,11 @@ After=network.target
 Type=forking
 User=cassandra
 Group=cassandra
-ExecStart=/usr/sbin/cassandra -p /run/cassandra/cassandra.pid
-PIDFile=/run/cassandra/cassandra.pid
+Environment=CASSANDRA_CONF=/etc/cassandra
+Environment=CASSANDRA_HOME=/usr/share/cassandra
+Environment=CASSANDRA_OWNR=cassandra
+ExecStart=/usr/sbin/cassandra -p /var/run/cassandra/cassandra.pid
+PIDFile=/var/run/cassandra/cassandra.pid
 WorkingDirectory=/var/lib/cassandra
 LimitMEMLOCK=infinity
 LimitNOFILE=100000
