@@ -47,7 +47,7 @@ cassandra-systemd:
     - enable: True
       reload: True
 
-cassandra_disable_transparent_huge_pages:
+cassandra_disable_transparent_huge_pages_service:
   cmd.run:
     - name: echo "never" > /sys/kernel/mm/transparent_hugepage/defrag
     - unless: ls /etc/systemd/system/disable-transparent-hugepage.service
