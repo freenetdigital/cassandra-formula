@@ -2,3 +2,7 @@
 PermissionsStartOnly=true
 ReadWriteDirectories=-/sys/kernel/mm/transparent_hugepage/defrag
 ExecStart=/bin/sh -c 'echo never > /sys/kernel/mm/transparent_hugepage/defrag'
+
+[Install]
+WantedBy=multi-user.target
+
