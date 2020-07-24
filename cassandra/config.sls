@@ -50,12 +50,13 @@ cassandra-systemd:
 cassandra_disable_transparent_huge_pages:
   cmd.run:
     - name: echo "never" > /sys/kernel/mm/transparent_hugepage/defrag
-    - unless: ls /etc/systemd/system/disable-transparent-hugepage.conf
+    - unless: ls /etc/systemd/system/disable-transparent-hugepage.service
   file.managed:
-    - name: /etc/systemd/system/disable-transparent-hugepage.conf
-    - source: salt://cassandra/files/disable-transparent-hugepage.conf
+    - name: /etc/systemd/system/disable-transparent-hugepage.service
+    - source: salt://cassandra/files/disable-transparent-hugepage.service
     - mode: 644
     - user: root
     - group: root
     - makedirs: True
+
 
