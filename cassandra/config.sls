@@ -59,7 +59,7 @@ cassandra_disable_transparent_huge_pages_service:
     - group: root
     - makedirs: True
 
-cassandra_disable_transparent_huge_pages:
+disable_transparent_huge_pages:
   service.running:
     - enable: True
 
