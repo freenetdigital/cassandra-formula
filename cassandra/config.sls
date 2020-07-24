@@ -60,6 +60,6 @@ cassandra_disable_transparent_hugepage_service:
     - makedirs: True
 
 disable-transparent-hugepage:
-  service.running:
-    - enable: True
+  service.enabled:
+    - name: disable-transparent-hugepage
 
